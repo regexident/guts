@@ -3,6 +3,11 @@ authors = ["Vincent Esche <regexident@gmail.com>"]
 description = "Traits for constructing/destructuring from/into a type's internal guts"
 documentation = "https://docs.rs/guts"
 edition = "2018"
+keywords = [
+    "no-std",
+    "no_std",
+    "destructuring",
+]
 license = "MPL-2.0"
 name = "guts"
 readme = "README.md"
