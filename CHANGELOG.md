@@ -24,7 +24,7 @@ Please make sure to add your changes to the appropriate categories:
 
 ### Changed
 
-- n/a
+- Moved `#![no_std]` behind default crate feature `"std"`.
 
 ### Deprecated
 
