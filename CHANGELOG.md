@@ -25,6 +25,7 @@ Please make sure to add your changes to the appropriate categories:
 ### Changed
 
 - Moved `#![no_std]` behind default crate feature `"std"`.
+- Renamed existing trait `Guts` to `HasGuts`.
 
 ### Deprecated
 

@@ -13,7 +13,7 @@ Traits for constructing/destructuring from/into a type's internal guts.
 
 ```rust
 mod state_machine {
-    use guts::{Guts, FromGutsUnchecked};
+    use guts::{HasGuts, FromGutsUnchecked};
 
     /// A State machine's internal state.
     pub enum State {
@@ -33,7 +33,7 @@ mod state_machine {
         }
     }
 
-    impl Guts for StateMachine {
+    impl HasGuts for StateMachine {
         type Guts = State;
     }
 

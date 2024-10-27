@@ -55,25 +55,25 @@
 #![cfg_attr(feature = "never_type", feature(never_type))]
 
 /// The base trait of `FromGuts` and `IntoGuts`, its more useful companions.
-pub trait Guts: Sized {
+pub trait HasGuts: Sized {
     /// The type's guts.
     type Guts;
 }
 
 /// Safely destructuring values into their guts.
-pub trait IntoGuts: Guts {
+pub trait IntoGuts: HasGuts {
     /// Destructures a value into its guts.
     fn into_guts(self) -> Self::Guts;
 }
 
 /// Safely constructing values from their guts.
-pub trait FromGuts: Guts {
+pub trait FromGuts: HasGuts {
     /// Constructs a value from its guts.
     fn from_guts(guts: Self::Guts) -> Self;
 }
 
 /// Safely constructing values from their guts with possible failure.
-pub trait TryFromGuts: Guts {
+pub trait TryFromGuts: HasGuts {
     type Error;
 
     /// Constructs a value from its guts, or fails.
@@ -93,7 +93,7 @@ where
 }
 
 /// Unsafely constructing values from their guts without checking invariants.
-pub trait FromGutsUnchecked: Guts {
+pub trait FromGutsUnchecked: HasGuts {
     /// Constructs a value from its guts, without checking invariants.
     ///
     /// # Safety
