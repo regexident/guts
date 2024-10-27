@@ -20,12 +20,11 @@ Please make sure to add your changes to the appropriate categories:
 
 ### Added
 
-- Added new traits `Guts` and `GutsMut`.
+- n/a
 
 ### Changed
 
-- Moved `#![no_std]` behind default crate feature `"std"`.
-- Renamed existing trait `Guts` to `HasGuts`.
+- n/a
 
 ### Deprecated
 
@@ -50,6 +49,17 @@ Please make sure to add your changes to the appropriate categories:
 ### Other
 
 - n/a
+
+## [0.2.0] - 2024-10-27
+
+### Added
+
+- Added new traits `Guts` and `GutsMut`.
+
+### Changed
+
+- Moved `#![no_std]` behind default crate feature `"std"`.
+- Renamed existing trait `Guts` to `HasGuts`.
 
 ## [0.1.1] - 2020-01-29
 
