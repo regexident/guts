@@ -60,6 +60,18 @@ pub trait HasGuts: Sized {
     type Guts;
 }
 
+/// Safely access a value's guts.
+pub trait Guts: HasGuts {
+    /// Returns a borrow of its guts.
+    fn guts(&self) -> &Self::Guts;
+}
+
+/// Safely mutably access a value's guts.
+pub trait GutsMut: Guts {
+    /// Returns a mutable borrow of its guts.
+    fn guts_mut(&mut self) -> &mut Self::Guts;
+}
+
 /// Safely destructuring values into their guts.
 pub trait IntoGuts: HasGuts {
     /// Destructures a value into its guts.
