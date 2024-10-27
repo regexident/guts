@@ -95,6 +95,10 @@ where
 /// Unsafely constructing values from their guts without checking invariants.
 pub trait FromGutsUnchecked: Guts {
     /// Constructs a value from its guts, without checking invariants.
+    ///
+    /// # Safety
+    /// Depending on the invariants of `Self` this method may
+    /// introduce unsafety by constructing from unchecked guts.
     unsafe fn from_guts_unchecked(guts: Self::Guts) -> Self;
 }
 
