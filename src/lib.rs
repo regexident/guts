@@ -2,8 +2,6 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-#![cfg_attr(all(not(test), not(feature = "std")), no_std)]
-
 //! Traits for constructing/destructuring from/into a type's internal guts.
 //!
 //! # Example
@@ -53,6 +51,10 @@
 //! ```
 
 #![cfg_attr(feature = "never_type", feature(never_type))]
+#![no_std]
+
+#[cfg(any(test, feature = "std"))]
+extern crate std;
 
 /// The base trait of `FromGuts` and `IntoGuts`, its more useful companions.
 pub trait HasGuts: Sized {
